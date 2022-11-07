@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Post
+from .models import Office
 
-class PostSerializer(serializers.ModelSerializer):
+class OfficeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
-        fields = ['id', 'title', 'body']
+        model = Office
+        fields = ['id', 'name', 'type']
