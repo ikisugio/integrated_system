@@ -3,6 +3,7 @@ from .models import Office, OfficeTypeSet
 
 admin.site.register(Office)
 admin.site.register(OfficeTypeSet)
+# admin.site.register(SupportInfo)
 
 
 admin.site.site_header = '介護労働安定センター | データ管理'
