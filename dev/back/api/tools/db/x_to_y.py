@@ -1,4 +1,4 @@
-from interface import importer, formatter, exporter
+# from interface import importer, formatter, exporter
 
 class Injector:
     def __init__(self, x, y, data):

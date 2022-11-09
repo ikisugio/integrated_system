@@ -45,9 +45,9 @@ class Office(models.Model):
         verbose_name = "事業所"
         verbose_name_plural = "事業所一覧"
     id = models.CharField(verbose_name="識別子", help_text = "介護保険事業所番号＠介護サービス分類コード　の半角文字列で構成されます。", max_length=32)   
-    code = models.CharField(verbose_name="介護保険事業所番号", max_length=32, primary_key=True)
+    care_office_code = models.CharField(verbose_name="介護保険事業所番号", max_length=32, primary_key=True)
     name = models.CharField(verbose_name="事業所名", max_length=64)
-    service_code = models.CharField(verbose_name="介護サービス分類コード", max_length=16)
+    care_service_code = models.CharField(verbose_name="介護サービス分類コード", max_length=16)
     postal_code = models.CharField(verbose_name="郵便番号", max_length=16, null=True)
     address = models.CharField(verbose_name="事業所所在地", max_length=64, null=True)
     phone = models.CharField(verbose_name="電話番号", max_length=16, null=True)
@@ -59,7 +59,7 @@ class Office(models.Model):
     company = models.CharField(verbose_name="所属法人名", max_length=64)
     owner = models.CharField(verbose_name="経営者氏名", max_length=32, null=True)
     manager = models.CharField(verbose_name="責任者氏名", max_length=32, null=True)
-    capacity_employment = models.IntegerField(verbose_name="定員", null=True)
+    capacity_of_guests = models.IntegerField(verbose_name="定員", null=True)
     url = models.CharField(verbose_name="URL", max_length=64, null=True)
     foundation_date = models.DateField(verbose_name="設立年月日", null=True)
     number_of_employees = models.IntegerField(verbose_name="従業員人数", null=True)
