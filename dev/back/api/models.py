@@ -44,7 +44,7 @@ class Office(models.Model):
     class Meta:
         verbose_name = "事業所"
         verbose_name_plural = "事業所一覧"
-    id = models.CharField(verbose_name="識別子", help_text = "介護保険事業所番号＠介護サービス分類コード　の半角文字列で構成されます。", max_length=32)   
+    id = models.CharField(verbose_name="識別子", help_text = "介護保険事業所番号_介護サービス分類コード　の半角文字列で構成されます。", max_length=32)   
     care_office_code = models.CharField(verbose_name="介護保険事業所番号", max_length=32, primary_key=True)
     name = models.CharField(verbose_name="事業所名", max_length=64)
     care_service_code = models.CharField(verbose_name="介護サービス分類コード", max_length=16)
