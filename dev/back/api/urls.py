@@ -4,7 +4,7 @@ from api.views import OfficeViewSet
 
 
 router = routers.DefaultRouter()
-router.register('office', OfficeViewSet)
+router.register('offices', OfficeViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
