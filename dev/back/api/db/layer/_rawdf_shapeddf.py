@@ -1,6 +1,10 @@
-def shape_df(df_added_all):
+
+
+def shape_df(df_added):
     
-    df_shaped = df_added_all
+    # id = care_office_number + "_" + care_service_code
+    # df_added = df_added.assign(id=care_service_code)
+    df_shaped = df_added
     
     return df_shaped
 

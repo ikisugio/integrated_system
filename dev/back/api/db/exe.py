@@ -10,7 +10,7 @@ db_path = funcs.get_db_path(
     info.DATA_AXIS_PATH,
     info.DB_NAME
 )
-filter = 3
+filter = 1
 
 
 def _():

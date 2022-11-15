@@ -41,7 +41,7 @@ def get_file_info(xlsx_full_path):
 def add_column(raw_df, xlsx_full_path):
     
     care_service_code = extract_care_service_code(xlsx_full_path)
-    df_added_id = raw_df.assign(id=care_service_code)
+    df_added_id = raw_df.assign(care_service_code=care_service_code)
     df_added_all = df_added_id
     
     return df_added_all
