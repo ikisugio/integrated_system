@@ -8,7 +8,7 @@ import Select from 'react-select'
 
 const datagridSx = {
   "& .MuiDataGrid-columnHeaders": {
-    backgroundColor: "rgba(70,80,90,0.7)",
+    backgroundColor: "rgba(70,90,90,0.4)",
     // color: "rgba(255,0,0,0.7)",
     fontSize: 15,
   }
@@ -51,50 +51,35 @@ const Table: React.FC = () => {
   if (!post) return "no post"
 
   const testColumns = [
-    {
-      field: "id", 
-      headerName: "ID", 
-      editable: true,
-    },
+    // {
+    //   field: "id", 
+    //   headerName: "ID", 
+    //   editable: true,
+    //   width: 140,
+    // },
     {
       field: "care_office_code", 
-      headerName: "介護事業所番号", 
+      headerName: "事業所番号", 
       editable: true,
-      width: 130,
+      width: 100,
+    },
+    {
+      field: "care_service_code",
+      headerName: "SC", 
+      editable: true,
+      width: 60,
     },
     {
       field: "name",
       headerName: "事業所名",
       editable: true,
+      width: 300,
     },
     {
-      field: "care_service_code",
-      headerName: "サービスコード", 
+      field: "company",
+      headerName: "法人名",
       editable: true,
-      width: 130,
-    },
-    {
-      field: "postal_code",
-      headerName: "郵便番号",
-      editable: true,
-    },
-    {
-      field: "address",
-      headerName: "住所",
-      editable: true,
-      width: 200,
-    },
-    {
-      field: "latitude",
-      headerName: "緯度",
-      editable: true,
-      width: 80,
-    },
-    {
-      field: "longitude",
-      headerName: "経度",
-      editable: true,
-      width: 80,
+      width: 250,
     },
     {
       field: "type",
@@ -104,9 +89,27 @@ const Table: React.FC = () => {
       valueOptions: ["hitokage", "pikachu", "fushigidane"],
     },
     {
-      field: "company",
-      headerName: "所属法人名",
+      field: "address",
+      headerName: "住所",
       editable: true,
+      width: 200,
+    },
+    {
+      field: "postal_code",
+      headerName: "郵便番号",
+      editable: true,
+    },
+    {
+      field: "latitude",
+      headerName: "緯度",
+      editable: true,
+      width: 100,
+    },
+    {
+      field: "longitude",
+      headerName: "経度",
+      editable: true,
+      width: 100,
     },
     {
       field: "owner",
@@ -120,13 +123,15 @@ const Table: React.FC = () => {
     },
     {
       field: "capacity_of_guests",
-      headerName: "定員",
+      headerName: "収容定員",
       editable: true,
+      width: 80,
     },
     {
-      field: "url",
-      headerName: "URL",
+      field: "number_of_employees",
+      headerName: "従業員数",
       editable: true,
+      width: 80,
     },
     {
       field: "foundation_date",
@@ -134,9 +139,10 @@ const Table: React.FC = () => {
       editable: true,
     },
     {
-      field: "number_of_employees",
-      headerName: "従業員数",
+      field: "url",
+      headerName: "URL",
       editable: true,
+      width: 450,
     },
     // {
     //   field: "name",
@@ -170,7 +176,7 @@ const Table: React.FC = () => {
         showCellRightBorder
         sx={datagridSx}
       />
-      <button onClick={createPost}>Create Post</button>
+      {/* <button onClick={createPost}>Create Post</button> */}
     </div>
   );
 };

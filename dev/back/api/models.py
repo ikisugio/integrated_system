@@ -56,7 +56,7 @@ class Office(models.Model):
     longitude = models.FloatField(verbose_name="経度", validators=[MinValueValidator(-180), MaxValueValidator(180)], null=True, blank=True)
     latitude = models.FloatField(verbose_name="緯度", validators=[MinValueValidator(-180), MaxValueValidator(180)], null=True, blank=True)
     type = models.ForeignKey("OfficeTypeSet", verbose_name="法人種別", on_delete=models.SET_NULL, null=True, blank=True)
-    company = models.CharField(verbose_name="所属法人名", max_length=64)
+    company = models.CharField(verbose_name="所属法人名", max_length=64, null=True, blank=True)
     owner = models.CharField(verbose_name="経営者氏名", max_length=32, null=True, blank=True)
     manager = models.CharField(verbose_name="責任者氏名", max_length=32, null=True, blank=True)
     capacity_of_guests = models.IntegerField(verbose_name="定員", null=True, blank=True)
